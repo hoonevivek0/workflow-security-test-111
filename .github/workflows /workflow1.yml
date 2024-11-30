@@ -1,0 +1,23 @@
+# .github/workflows/workflow1.yml
+name: Create Artifact
+
+on:
+  pull_request: # Trigger when a PR is created or updated
+    branches:
+      - main
+
+jobs:
+  create-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Generate artifact
+        run: echo "PR Information: ${{ github.event.pull_request.title }}" > pr_info.txt
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: pr_info
+          path: pr_info.txt
