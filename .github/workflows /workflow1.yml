@@ -2,7 +2,7 @@
 name: Create Artifact
 
 on:
-  pull_request: # Trigger when a PR is created or updated
+  pull_request: # Trigger when a PR is created or updatedss
     branches:
       - main
 
