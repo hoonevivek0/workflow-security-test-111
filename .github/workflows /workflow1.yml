@@ -2,7 +2,7 @@
 name: Create Artifact
 
 on:
-  workflow_dispatch: # Trigger when a PR is created or updated
+  pull_request: # Trigger when a PR is created or updated
     branches:
       - main
 
