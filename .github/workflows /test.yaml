@@ -1,22 +1,15 @@
-name: Hello World Action
+name: Manual Trigger Example
 
-# Trigger the workflow manually or on every push to the main branch
+# Trigger the workflow manually
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
-  hello-world-job:
+  say-hello:
     runs-on: ubuntu-latest
-    
+
     steps:
-      # Step 1: Check out the repository code
-      - name: Check out code
-        uses: actions/checkout@v3
-        
-      # Step 2: Print "Hello, World!"
+      # Step 1: Print Hello, World!
       - name: Print Hello World
         run: echo "Hello, World!"
 
