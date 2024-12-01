@@ -1,0 +1,14 @@
+name: Manual Trigger Example
+
+# Trigger the workflow manually
+on:
+  workflow_dispatch:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Print Hello, World!
+      - name: Print Hello World
+        run: echo "Hello, World!"
